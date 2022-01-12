@@ -61,14 +61,14 @@ void doConvolutionBlur(pixel* src, pixel* dst) {
     }
     i = 0;
     int j;
-    int tempIMinus1N;
-    int tempIPlus1N;
-    int tempI1N;
+    int tempIMinus1N = -n;
+    int tempIPlus1N  = n;
+    int tempI1N=0;
     int temp;
     	for (i = 1 ; i < n - 1; i++) {
-             tempIMinus1N = (i-1)*n;
-             tempIPlus1N = (i+1)*n;
-             tempI1N = (i)*n;
+            tempIMinus1N += n;
+            tempIPlus1N += n;
+            tempI1N += n;
             for (j =  1 ; j < n - 1 ; j++) {
                  temp = tempI1N + j;
                 dst[temp].green = (src[tempIMinus1N + j - 1].green + src[tempIMinus1N + j].green + src[tempIMinus1N + j + 1].green
@@ -82,19 +82,20 @@ void doConvolutionBlur(pixel* src, pixel* dst) {
                 dst[temp].red = (src[tempIMinus1N + j - 1].red + src[tempIMinus1N + j].red + src[tempIMinus1N + j + 1].red
                                  + src[tempI1N + j - 1].red + src[tempI1N + j].red + src[tempI1N + j + 1].red +
                                  src[tempIPlus1N + j - 1].red + src[tempIPlus1N + j].red + src[tempIPlus1N + j + 1].red) /9;
+
             }
         }
 }
 void doConvolutionSharpen(pixel* src, pixel* dst) {
     int i, j;
-    int tempIMinus1N;
-    int tempIPlus1N;
-    int tempI1N;
+    int tempIMinus1N = -n;
+    int tempIPlus1N  = n;
+    int tempI1N=0;
     int temp;
     for (i = 1; i < n - 1; i++) {
-         tempIMinus1N = (i - 1) * n;
-         tempIPlus1N = (i + 1) * n;
-         tempI1N = (i) * n;
+         tempIMinus1N += n;
+         tempIPlus1N += n;
+         tempI1N += n;
         for (j = 1; j < n - 1; j++) {
              temp = tempI1N + j;
             dst[temp].green = (-src[tempIMinus1N + j - 1].green - src[tempIMinus1N + j].green - src[tempIMinus1N + j +1].green
@@ -136,7 +137,7 @@ void doConvolutionBlurFilter(pixel* src, pixel* dst) {
     }
     dst[n] = src[n];
     // copies the side frames
-    for (i = (n * 2) - 1; i < limit; i += n) {
+    for (i = (n + n) - 1; i < limit; i += n) {
         dst[i] = src[i];
         dst[i + 1] = src[i + 1];
     }
@@ -144,9 +145,9 @@ void doConvolutionBlurFilter(pixel* src, pixel* dst) {
     int j;
     int maxSum = 0, minSum = 0;
     int sumTemp = 0;
-    int tempIMinus1N;
-    int tempIPlus1N;
-    int tempI1N;
+    int tempIMinus1N = -n;
+    int tempIPlus1N  = n;
+    int tempI1N=0;
     int temp;
     unsigned int tempGreenMax;
     unsigned int tempBlueMax;
@@ -155,9 +156,9 @@ void doConvolutionBlurFilter(pixel* src, pixel* dst) {
     unsigned int tempBlueMin ;
     unsigned int tempRedMin ;
     for (i = 1; i < n - 1; i++) {
-         tempIMinus1N = (i - 1) * n;
-         tempIPlus1N = (i + 1) * n;
-         tempI1N = (i) * n;
+        tempIMinus1N += n;
+        tempIPlus1N += n;
+        tempI1N += n;
         for (j = 1; j < n - 1; j++) {
              temp = tempI1N + j;
              tempGreenMax = src[tempIMinus1N + j - 1].green;

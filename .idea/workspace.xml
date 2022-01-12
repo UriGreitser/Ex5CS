@@ -11,7 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="305f0cb9-2b2f-47e8-9db8-04ad976d0880" name="Changes" comment="">
+    <list default="true" id="305f0cb9-2b2f-47e8-9db8-04ad976d0880" name="Changes" comment="Working after opto">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myfunction.c" beforeDir="false" afterPath="$PROJECT_DIR$/myfunction.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/showBMP" beforeDir="false" afterPath="$PROJECT_DIR$/showBMP" afterDir="false" />
@@ -52,9 +53,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
@@ -121,8 +124,16 @@
       <workItem from="1641914524652" duration="42000" />
       <workItem from="1641914578471" duration="4160000" />
       <workItem from="1641918753529" duration="20065000" />
-      <workItem from="1641939865729" duration="16307000" />
+      <workItem from="1641939865729" duration="18207000" />
     </task>
+    <task id="LOCAL-00001" summary="Working after opto">
+      <created>1641991873074</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1641991873074</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +150,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Working after opto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working after opto" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -149,12 +164,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/myfunction.c</url>
-          <line>324</line>
+          <line>325</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/myfunction.c</url>
-          <line>321</line>
+          <line>322</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
